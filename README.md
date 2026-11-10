@@ -1,61 +1,56 @@
 # Lead Inbox
 
-A small, working lead-management app: two company accounts, duplicate-safe JSON imports, a responsive inbox, closer statistics, and a follow-up API. Vanilla JavaScript frontend, a Web API backend, and SQLite locally / Cloudflare D1 when hosted. No third-party runtime dependencies.
+My solution for the Lead Inbox task. It includes separate company logins, JSON imports, a lead list, closer stats and a follow-up queue.
 
-**Live demo:** https://lead-inbox-sprud-2026.lielie-d-i-8001.chatgpt.site
+I used plain JavaScript for the frontend and backend, with SQLite locally and Cloudflare D1 for the hosted version. There are no runtime dependencies to install.
 
-| Account | Email | Password |
+[Live demo](https://lead-inbox-sprud-2026.lielie-d-i-8001.chatgpt.site) · [Repository](https://github.com/ArtursSprudzans/lead-inbox)
+
+## Try it
+
+| Company | Email | Password |
 | --- | --- | --- |
-| Company A | `a@leadinbox.demo` | `LeadInbox2026!` |
-| Company B | `b@leadinbox.demo` | `LeadInbox2026!` |
+| A | `a@leadinbox.demo` | `LeadInbox2026!` |
+| B | `b@leadinbox.demo` | `LeadInbox2026!` |
 
-These are intentionally public demo accounts. All contacts are fictional; email addresses use `example.com` and phone numbers use the reserved US fictional range. Every authenticated query derives the company from the server session. A company supplied in a URL or request cannot change that scope.
+Both accounts use made-up contacts. The company comes from the login session, so changing a company ID in a request doesn't give access to the other company's records.
 
-## Run and test
+## Run locally
 
-Install Node.js **24.11 or later**. No `npm install` is needed.
+You'll need Node.js 24.11 or newer. No `npm install` is needed.
 
 ```sh
-node scripts/dev.mjs             # http://localhost:3000
-node --test tests/*.test.mjs      # domain + API integration tests
-node scripts/build.mjs           # deployable dist/server/index.js
+node scripts/dev.mjs          # starts at http://localhost:3000
+node --test tests/*.test.mjs  # run the tests
+node scripts/build.mjs       # build the hosted app
 ```
 
-The server applies the SQL migration and imports both sample files on its first API request. Local data persists in `.local/inbox.sqlite`; hosted data persists in D1. Use **Import data** to upload both JSON files; each account imports only its company’s rows. Repeating the import adds nothing. Invalid tenant references or conflicting IDs reject the whole company import without partial writes; simultaneous imports use a revision check and return a retryable conflict when necessary.
+The sample files are loaded automatically on the first API request. Local data is saved in `.local/inbox.sqlite`. You can also upload both files through **Import data**. Importing them again won't create extra leads or bookings.
 
-Browser verification: start Chrome with `--remote-debugging-port=9222` and a separate test profile, then run `node scripts/browser-smoke.mjs`. It exercises both accounts, filters, details, stats, file uploads, repeat imports, logout, and 360px/390px layouts, saving screenshots under `.local/screenshots/`. `APP_URL` can select another deployment.
+## Data and assumptions
 
-## Sample data and assumptions
+I didn't receive the original files, so I generated [leads.json](data/leads.json) and [bookings.json](data/bookings.json). There are 46 lead records that merge into 40 people, split evenly between the two companies, and 72 booking events. The examples include duplicates, cancellations, reschedules, attended meetings and no-shows.
 
-The original task files were not provided. [`data/leads.json`](data/leads.json) and [`data/bookings.json`](data/bookings.json) are generated fixtures: **46 source lead records → 40 people (20 per company), 72 events**. They include formatted duplicate phones, case-varied emails, duplicate-source booking references, shuffled event order, closer reassignment, and every required event type. One contact deliberately exists in both companies to exercise isolation.
+These are the rules I used where the task wasn't specific:
+
+- A matching phone number or email means the same person within a company. Phone formatting and email casing are ignored. A matching name alone isn't enough.
+- Each appointment has a `meeting_id`. Rescheduling keeps that ID; booking again after a cancellation or outcome uses a new one. Events are processed by their timestamp, regardless of file order.
+- The next active meeting determines a lead's status. If there isn't one, I use the latest event. A lead with no events is new.
+- Booked counts appointments, so a reschedule doesn't count twice. Cancelled appointments still count as having been booked. Stats go to the latest assigned closer.
+- Show rate is `showed / (showed + no-shows)`. Future meetings, cancellations and meetings without an outcome are left out of that calculation. Stats cover all imported history.
+- Follow-ups become due the next calendar day after a lead is created without a meeting, a cancellation or a no-show. Past meetings without an outcome also become due the next day. The queue includes overdue leads and excludes people who attended or have a future meeting. Dates use `Europe/Riga`.
+
+The checked-in data uses 10 November 2026 as its reference date. To generate another set:
 
 ```sh
 node scripts/generate-data.mjs --date 2026-11-10
 ```
 
-The checked-in fixture is anchored to 10 November 2026. Without `--date`, generation uses today in Riga. Regeneration changes files, not an already seeded database; start a fresh local database with `DATABASE_PATH` to preview a new fixture. All API decisions use the actual server clock.
+Leaving out `--date` uses today's date in Riga. This only changes the JSON files; it doesn't replace an existing database. Use a fresh `DATABASE_PATH` when running locally if you want to load a new set.
 
-- **Identity:** within a company, normalized phone **or** case-insensitive email matches identify the same person, including transitive matches. Names alone never merge people. Phones require an explicit country code; `00` and `+` prefixes and formatting normalize consistently. Source aliases remain available for bookings. The smallest source ID becomes the canonical ID, earliest creation time is retained, and latest nonempty contact details win.
-- **Events:** `bookings.json` is an append-only event log. `meeting_id` identifies an appointment; a reschedule keeps it, while rebooking after a terminal outcome needs a new one. Replay sorts by `occurred_at`, then deterministic ID order. Timestamps require an explicit offset. Terminal outcomes are `met`, `no_show` (also accepts `no-show`), and `cancelled`; invalid transitions reject the import.
-- **Current status:** the nearest future active meeting takes precedence; otherwise the latest recorded event determines status. Leads without events are `new`. Unresolved past bookings stay booked with no next meeting and become eligible for follow-up.
-- **Stats:** booked counts distinct appointments ever booked, including subsequently cancelled appointments. Rescheduling does not add a booking. Showed counts appointments ending in `met`; show rate is `showed / (showed + no_show) × 100`. Cancelled, future, and unresolved meetings are excluded from the denominator. With no resolved outcomes the rate is `null` and displayed as a dash. The latest assigned closer receives the appointment and outcome counts. Stats cover all imported history.
-- **Follow-ups:** use calendar days in `Europe/Riga`, including daylight-saving changes. An unbooked lead is due the day after creation; a cancellation/no-show is due the day after its event; an unresolved past meeting is due the day after the meeting. Return due-today **and overdue** leads once each, excluding met leads and anyone with a future active meeting. The endpoint computes a queue; it does not send messages or mark them sent.
+## Follow-up endpoint
 
-## API
-
-All data endpoints require the HttpOnly session cookie from login. Sessions expire after 12 hours, logout revokes them, passwords use PBKDF2, and only session-token hashes are stored. HTTPS cookies include `Secure`; mutations enforce same-origin requests.
-
-| Method | Route | Result |
-| --- | --- | --- |
-| POST | `/api/login` | `{email,password}` → session cookie and user |
-| POST | `/api/logout` | Revoke current session |
-| GET | `/api/me` | Current company account |
-| GET | `/api/leads` | Deduplicated leads, status, next meeting, closer |
-| GET | `/api/stats` | Per-closer counts/rates and totals |
-| GET | `/api/follow-ups` | `{date, timezone, leads:[…reason,dueAt]}` |
-| POST | `/api/import` | `{leads:[],bookings:[]}` → import counts |
-
-For example, after logging in:
+`GET /api/follow-ups` returns the logged-in company's leads due today or earlier, with a reason and due date. It uses the same session cookie as the app.
 
 ```sh
 curl -c cookies.txt -H 'Content-Type: application/json' \
@@ -64,16 +59,12 @@ curl -c cookies.txt -H 'Content-Type: application/json' \
 curl -b cookies.txt http://localhost:3000/api/follow-ups
 ```
 
-Source schemas: leads use `id, company_id, name, email, phone, created_at`; events use `id, company_id, lead_id, meeting_id, type, occurred_at, meeting_at, closer`. Imports accept up to 1,000 rows in each array and a 2 MB request. IDs are unique within their company; unchanged replays are safe and changed payloads require new IDs. Normalization supports this bounded exercise; a production system should materialize indexed projections rather than replay every read.
+The tests cover company separation, sessions, repeated and invalid imports, event ordering, stats and follow-up dates. There's also a browser check in `scripts/browser-smoke.mjs` for the main flows and mobile layouts.
 
-## Deployment
+## What I left out
 
-The included `.openai/hosting.json` configures the published Sites app and D1 binding; versioned SQL lives in `drizzle/`. The build embeds the UI and sample fixtures in a single Worker module. No database data, credentials, browser profiles, or local runtime binaries enter the repository.
+No signup, password reset, manual lead editing or calendar integration. The follow-up endpoint returns a list; it doesn't send messages or track whether someone has already been contacted. Login rate limiting is per server instance.
 
-For a separate Cloudflare deployment: install Wrangler, create a D1 database, replace `database_id` in `wrangler.jsonc`, run `node scripts/build.mjs`, `wrangler d1 migrations apply lead-inbox --remote`, and `wrangler deploy`. Use your own accounts and credentials before loading real contacts.
+## What I'd do next
 
-## Skipped and next
-
-Kept the interview scope small: no signup/password reset, manual CRM editing, message delivery, follow-up delivery history, roles beyond company membership, external calendar integration, or database UI. Login backoff is per Worker instance; this is a public sample, not a production account service.
-
-Next: managed authentication and shared rate limits, normalized/indexed lead and meeting projections, paginated server queries, delivery history with suppression/consent, and CI for deployment and browser tests. Clarify the employer’s actual file schema, closer attribution, show-rate denominator, and follow-up rules before importing their real files.
+First, check the assumptions against the actual input files and agree on the follow-up rules. After that I'd add proper account management, shared rate limiting and a record of sent follow-ups. For larger datasets, I'd store indexed lead and meeting summaries instead of replaying the events on every read, and move pagination to the server.
