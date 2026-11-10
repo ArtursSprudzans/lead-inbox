@@ -1,0 +1,12 @@
+.git/
+.local/
+.vercel/
+.wrangler/
+.sites-local/
+.openai/
+.env*
+node_modules/
+dist/
+*.tar.gz
+playwright-report/
+test-results/

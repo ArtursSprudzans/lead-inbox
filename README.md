@@ -2,7 +2,7 @@
 
 My solution for the Lead Inbox task. It includes separate company logins, JSON imports, a lead list, closer stats and a follow-up queue.
 
-I used plain JavaScript for the frontend and backend, with SQLite locally and Cloudflare D1 for the hosted version. There are no runtime dependencies to install.
+I used plain JavaScript for the frontend and backend. Local development uses SQLite. For Vercel, the app connects to a Turso database through its JavaScript client.
 
 [Live demo](https://lead-inbox-sprud-2026.lielie-d-i-8001.chatgpt.site) · [Repository](https://github.com/ArtursSprudzans/lead-inbox)
 
@@ -17,15 +17,26 @@ Both accounts use made-up contacts. The company comes from the login session, so
 
 ## Run locally
 
-You'll need Node.js 24.11 or newer. No `npm install` is needed.
+You'll need Node.js 24.11 or newer within the 24.x release.
 
 ```sh
+npm ci
 node scripts/dev.mjs          # starts at http://localhost:3000
 node --test tests/*.test.mjs  # run the tests
-node scripts/build.mjs       # build the hosted app
+npm run build                # build for Vercel
 ```
 
 The sample files are loaded automatically on the first API request. Local data is saved in `.local/inbox.sqlite`. You can also upload both files through **Import data**. Importing them again won't create extra leads or bookings.
+
+## Deploy on Vercel
+
+Import this repository into Vercel using the **Other** framework preset. The build command and API routes are already set in `vercel.json`.
+
+Connect a [Turso database](https://vercel.com/marketplace/tursocloud) from Vercel's Storage Marketplace. The app needs `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` in its deployment environment. Keep preview and production databases separate if you enable preview deployments.
+
+The Vercel build applies the SQL migrations before deploying. On the first API request, the app loads the sample data and creates the two demo accounts. Sessions and imports are stored in Turso, so they survive restarts and redeployments.
+
+To apply migrations yourself, copy `.env.example` to an ignored `.env.local`, fill in the database credentials, and run `npm run db:migrate`. The existing demo link above still points to the original deployment until the Vercel deployment is published.
 
 ## Data and assumptions
 
