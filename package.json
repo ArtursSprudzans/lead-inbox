@@ -1,0 +1,15 @@
+{
+  "name": "lead-inbox",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A company-scoped lead inbox with event-based meeting history.",
+  "engines": { "node": ">=24.11.0" },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "start": "node scripts/dev.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "build": "node scripts/build.mjs",
+    "generate-data": "node scripts/generate-data.mjs"
+  }
+}

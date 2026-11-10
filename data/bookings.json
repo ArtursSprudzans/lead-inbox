@@ -1,0 +1,722 @@
+[
+  {
+    "id": "B-E0072",
+    "company_id": "B",
+    "lead_id": "B-L20",
+    "meeting_id": "B-L20-M1",
+    "type": "met",
+    "occurred_at": "2026-11-03T11:00:00.000Z",
+    "meeting_at": "2026-11-03T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0071",
+    "company_id": "B",
+    "lead_id": "B-L20",
+    "meeting_id": "B-L20-M1",
+    "type": "booked",
+    "occurred_at": "2026-10-30T08:00:00.000Z",
+    "meeting_at": "2026-11-03T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0070",
+    "company_id": "B",
+    "lead_id": "B-L19",
+    "meeting_id": "B-L19-M1",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-07T09:00:00.000Z",
+    "meeting_at": "2026-11-09T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0069",
+    "company_id": "B",
+    "lead_id": "B-L19",
+    "meeting_id": "B-L19-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-05T08:00:00.000Z",
+    "meeting_at": "2026-11-08T11:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0068",
+    "company_id": "B",
+    "lead_id": "B-L18",
+    "meeting_id": "B-L18-M1",
+    "type": "met",
+    "occurred_at": "2026-11-09T11:00:00.000Z",
+    "meeting_at": "2026-11-09T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0067",
+    "company_id": "B",
+    "lead_id": "B-L18",
+    "meeting_id": "B-L18-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-05T08:00:00.000Z",
+    "meeting_at": "2026-11-09T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0066",
+    "company_id": "B",
+    "lead_id": "B-L16",
+    "meeting_id": "B-L16-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-15T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0065",
+    "company_id": "B",
+    "lead_id": "B-L15",
+    "meeting_id": "B-L15-M1",
+    "type": "cancelled",
+    "occurred_at": "2026-11-10T09:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0064",
+    "company_id": "B",
+    "lead_id": "B-L15",
+    "meeting_id": "B-L15-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0063",
+    "company_id": "B",
+    "lead_id": "B-L14",
+    "meeting_id": "B-L14-M1",
+    "type": "no_show",
+    "occurred_at": "2026-11-10T07:00:00.000Z",
+    "meeting_at": "2026-11-10T06:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0062",
+    "company_id": "B",
+    "lead_id": "B-L14",
+    "meeting_id": "B-L14-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-06T08:00:00.000Z",
+    "meeting_at": "2026-11-10T06:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0061",
+    "company_id": "B",
+    "lead_id": "B-L13",
+    "meeting_id": "B-L13-M1",
+    "type": "met",
+    "occurred_at": "2026-11-07T11:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0060",
+    "company_id": "B",
+    "lead_id": "B-L13",
+    "meeting_id": "B-L13-M1",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-05T09:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0059",
+    "company_id": "B",
+    "lead_id": "B-L13",
+    "meeting_id": "B-L13-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-03T08:00:00.000Z",
+    "meeting_at": "2026-11-06T11:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0058",
+    "company_id": "B",
+    "lead_id": "B-L12",
+    "meeting_id": "B-L12-M1",
+    "type": "met",
+    "occurred_at": "2026-11-06T11:00:00.000Z",
+    "meeting_at": "2026-11-06T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0057",
+    "company_id": "B",
+    "lead_id": "B-L12",
+    "meeting_id": "B-L12-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-02T08:00:00.000Z",
+    "meeting_at": "2026-11-06T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0056",
+    "company_id": "B",
+    "lead_id": "B-L11",
+    "meeting_id": "B-L11-M2",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-09T09:00:00.000Z",
+    "meeting_at": "2026-11-14T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0055",
+    "company_id": "B",
+    "lead_id": "B-L11",
+    "meeting_id": "B-L11-M2",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-13T11:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0054",
+    "company_id": "B",
+    "lead_id": "B-L11",
+    "meeting_id": "B-L11-M1",
+    "type": "no_show",
+    "occurred_at": "2026-11-05T11:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0053",
+    "company_id": "B",
+    "lead_id": "B-L11",
+    "meeting_id": "B-L11-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-01T08:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0052",
+    "company_id": "B",
+    "lead_id": "B-L10-copy",
+    "meeting_id": "B-L10-M2",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0051",
+    "company_id": "B",
+    "lead_id": "B-L10-copy",
+    "meeting_id": "B-L10-M1",
+    "type": "cancelled",
+    "occurred_at": "2026-11-03T09:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0050",
+    "company_id": "B",
+    "lead_id": "B-L10-copy",
+    "meeting_id": "B-L10-M1",
+    "type": "booked",
+    "occurred_at": "2026-10-31T08:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0049",
+    "company_id": "B",
+    "lead_id": "B-L09",
+    "meeting_id": "B-L09-M2",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-13T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0048",
+    "company_id": "B",
+    "lead_id": "B-L09",
+    "meeting_id": "B-L09-M1",
+    "type": "met",
+    "occurred_at": "2026-11-04T11:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0047",
+    "company_id": "B",
+    "lead_id": "B-L09",
+    "meeting_id": "B-L09-M1",
+    "type": "booked",
+    "occurred_at": "2026-10-31T08:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0046",
+    "company_id": "B",
+    "lead_id": "B-L08",
+    "meeting_id": "B-L08-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-04T08:00:00.000Z",
+    "meeting_at": "2026-11-08T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0045",
+    "company_id": "B",
+    "lead_id": "B-L07",
+    "meeting_id": "B-L07-M1",
+    "type": "cancelled",
+    "occurred_at": "2026-11-07T09:00:00.000Z",
+    "meeting_at": "2026-11-08T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0044",
+    "company_id": "B",
+    "lead_id": "B-L07",
+    "meeting_id": "B-L07-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-04T08:00:00.000Z",
+    "meeting_at": "2026-11-08T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0043",
+    "company_id": "B",
+    "lead_id": "B-L06-copy",
+    "meeting_id": "B-L06-M1",
+    "type": "no_show",
+    "occurred_at": "2026-11-07T11:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0042",
+    "company_id": "B",
+    "lead_id": "B-L06-copy",
+    "meeting_id": "B-L06-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-03T08:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "B-E0041",
+    "company_id": "B",
+    "lead_id": "B-L05",
+    "meeting_id": "B-L05-M1",
+    "type": "met",
+    "occurred_at": "2026-11-05T11:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0040",
+    "company_id": "B",
+    "lead_id": "B-L05",
+    "meeting_id": "B-L05-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-01T08:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Eva Brooks"
+  },
+  {
+    "id": "B-E0039",
+    "company_id": "B",
+    "lead_id": "B-L04",
+    "meeting_id": "B-L04-M1",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-09T09:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0038",
+    "company_id": "B",
+    "lead_id": "B-L04",
+    "meeting_id": "B-L04-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-11T11:00:00.000Z",
+    "closer": "Oliver Reed"
+  },
+  {
+    "id": "B-E0037",
+    "company_id": "B",
+    "lead_id": "B-L03-copy",
+    "meeting_id": "B-L03-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-11T10:00:00.000Z",
+    "closer": "Theo James"
+  },
+  {
+    "id": "A-E0036",
+    "company_id": "A",
+    "lead_id": "A-L20",
+    "meeting_id": "A-L20-M1",
+    "type": "met",
+    "occurred_at": "2026-11-03T11:00:00.000Z",
+    "meeting_at": "2026-11-03T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0035",
+    "company_id": "A",
+    "lead_id": "A-L20",
+    "meeting_id": "A-L20-M1",
+    "type": "booked",
+    "occurred_at": "2026-10-30T08:00:00.000Z",
+    "meeting_at": "2026-11-03T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0034",
+    "company_id": "A",
+    "lead_id": "A-L19",
+    "meeting_id": "A-L19-M1",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-07T09:00:00.000Z",
+    "meeting_at": "2026-11-09T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0033",
+    "company_id": "A",
+    "lead_id": "A-L19",
+    "meeting_id": "A-L19-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-05T08:00:00.000Z",
+    "meeting_at": "2026-11-08T11:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0032",
+    "company_id": "A",
+    "lead_id": "A-L18",
+    "meeting_id": "A-L18-M1",
+    "type": "met",
+    "occurred_at": "2026-11-09T11:00:00.000Z",
+    "meeting_at": "2026-11-09T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0031",
+    "company_id": "A",
+    "lead_id": "A-L18",
+    "meeting_id": "A-L18-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-05T08:00:00.000Z",
+    "meeting_at": "2026-11-09T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0030",
+    "company_id": "A",
+    "lead_id": "A-L16",
+    "meeting_id": "A-L16-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-15T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0029",
+    "company_id": "A",
+    "lead_id": "A-L15",
+    "meeting_id": "A-L15-M1",
+    "type": "cancelled",
+    "occurred_at": "2026-11-10T09:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0028",
+    "company_id": "A",
+    "lead_id": "A-L15",
+    "meeting_id": "A-L15-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0027",
+    "company_id": "A",
+    "lead_id": "A-L14",
+    "meeting_id": "A-L14-M1",
+    "type": "no_show",
+    "occurred_at": "2026-11-10T07:00:00.000Z",
+    "meeting_at": "2026-11-10T06:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0026",
+    "company_id": "A",
+    "lead_id": "A-L14",
+    "meeting_id": "A-L14-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-06T08:00:00.000Z",
+    "meeting_at": "2026-11-10T06:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0025",
+    "company_id": "A",
+    "lead_id": "A-L13",
+    "meeting_id": "A-L13-M1",
+    "type": "met",
+    "occurred_at": "2026-11-07T11:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0024",
+    "company_id": "A",
+    "lead_id": "A-L13",
+    "meeting_id": "A-L13-M1",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-05T09:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0023",
+    "company_id": "A",
+    "lead_id": "A-L13",
+    "meeting_id": "A-L13-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-03T08:00:00.000Z",
+    "meeting_at": "2026-11-06T11:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0022",
+    "company_id": "A",
+    "lead_id": "A-L12",
+    "meeting_id": "A-L12-M1",
+    "type": "met",
+    "occurred_at": "2026-11-06T11:00:00.000Z",
+    "meeting_at": "2026-11-06T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0021",
+    "company_id": "A",
+    "lead_id": "A-L12",
+    "meeting_id": "A-L12-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-02T08:00:00.000Z",
+    "meeting_at": "2026-11-06T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0020",
+    "company_id": "A",
+    "lead_id": "A-L11",
+    "meeting_id": "A-L11-M2",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-09T09:00:00.000Z",
+    "meeting_at": "2026-11-14T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0019",
+    "company_id": "A",
+    "lead_id": "A-L11",
+    "meeting_id": "A-L11-M2",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-13T11:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0018",
+    "company_id": "A",
+    "lead_id": "A-L11",
+    "meeting_id": "A-L11-M1",
+    "type": "no_show",
+    "occurred_at": "2026-11-05T11:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0017",
+    "company_id": "A",
+    "lead_id": "A-L11",
+    "meeting_id": "A-L11-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-01T08:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0016",
+    "company_id": "A",
+    "lead_id": "A-L10-copy",
+    "meeting_id": "A-L10-M2",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0015",
+    "company_id": "A",
+    "lead_id": "A-L10-copy",
+    "meeting_id": "A-L10-M1",
+    "type": "cancelled",
+    "occurred_at": "2026-11-03T09:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0014",
+    "company_id": "A",
+    "lead_id": "A-L10-copy",
+    "meeting_id": "A-L10-M1",
+    "type": "booked",
+    "occurred_at": "2026-10-31T08:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0013",
+    "company_id": "A",
+    "lead_id": "A-L09",
+    "meeting_id": "A-L09-M2",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-13T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0012",
+    "company_id": "A",
+    "lead_id": "A-L09",
+    "meeting_id": "A-L09-M1",
+    "type": "met",
+    "occurred_at": "2026-11-04T11:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0011",
+    "company_id": "A",
+    "lead_id": "A-L09",
+    "meeting_id": "A-L09-M1",
+    "type": "booked",
+    "occurred_at": "2026-10-31T08:00:00.000Z",
+    "meeting_at": "2026-11-04T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0010",
+    "company_id": "A",
+    "lead_id": "A-L08",
+    "meeting_id": "A-L08-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-04T08:00:00.000Z",
+    "meeting_at": "2026-11-08T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0009",
+    "company_id": "A",
+    "lead_id": "A-L07",
+    "meeting_id": "A-L07-M1",
+    "type": "cancelled",
+    "occurred_at": "2026-11-07T09:00:00.000Z",
+    "meeting_at": "2026-11-08T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0008",
+    "company_id": "A",
+    "lead_id": "A-L07",
+    "meeting_id": "A-L07-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-04T08:00:00.000Z",
+    "meeting_at": "2026-11-08T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0007",
+    "company_id": "A",
+    "lead_id": "A-L06-copy",
+    "meeting_id": "A-L06-M1",
+    "type": "no_show",
+    "occurred_at": "2026-11-07T11:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0006",
+    "company_id": "A",
+    "lead_id": "A-L06-copy",
+    "meeting_id": "A-L06-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-03T08:00:00.000Z",
+    "meeting_at": "2026-11-07T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  },
+  {
+    "id": "A-E0005",
+    "company_id": "A",
+    "lead_id": "A-L05",
+    "meeting_id": "A-L05-M1",
+    "type": "met",
+    "occurred_at": "2026-11-05T11:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0004",
+    "company_id": "A",
+    "lead_id": "A-L05",
+    "meeting_id": "A-L05-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-01T08:00:00.000Z",
+    "meeting_at": "2026-11-05T10:00:00.000Z",
+    "closer": "Leo Martins"
+  },
+  {
+    "id": "A-E0003",
+    "company_id": "A",
+    "lead_id": "A-L04",
+    "meeting_id": "A-L04-M1",
+    "type": "rescheduled",
+    "occurred_at": "2026-11-09T09:00:00.000Z",
+    "meeting_at": "2026-11-12T10:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0002",
+    "company_id": "A",
+    "lead_id": "A-L04",
+    "meeting_id": "A-L04-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-11T11:00:00.000Z",
+    "closer": "Maya Chen"
+  },
+  {
+    "id": "A-E0001",
+    "company_id": "A",
+    "lead_id": "A-L03-copy",
+    "meeting_id": "A-L03-M1",
+    "type": "booked",
+    "occurred_at": "2026-11-07T08:00:00.000Z",
+    "meeting_at": "2026-11-11T10:00:00.000Z",
+    "closer": "Nora Ellis"
+  }
+]

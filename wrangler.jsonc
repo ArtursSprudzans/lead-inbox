@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "lead-inbox",
+  "main": "dist/server/index.js",
+  "compatibility_date": "2025-11-01",
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "lead-inbox",
+    "database_id": "REPLACE_WITH_YOUR_D1_DATABASE_ID",
+    "migrations_dir": "drizzle"
+  }]
+}

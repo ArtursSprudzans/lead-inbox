@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.local/
+.wrangler/
+.env
+.env.*
+!.env.example
+*.tar.gz
+.sites-local/
+playwright-report/
+test-results/
